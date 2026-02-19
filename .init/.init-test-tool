@@ -1,0 +1,4 @@
+{
+    "command": "npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/voice-assistant-platform-223121/voice_assistant_frontend"
+}
