@@ -71,9 +71,6 @@ export async function getHealth(): Promise<HealthResponse> {
 /**
  * PUBLIC_INTERFACE
  * Loads chat history.
- *
- * Note: backend currently doesn't expose this yet; this is wired so that when
- * backend adds /history it will "just work". For now, caller should handle errors.
  */
 export async function getHistory(): Promise<ChatMessage[]> {
   return apiFetch<ChatMessage[]>("/history", { method: "GET" });
@@ -82,8 +79,6 @@ export async function getHistory(): Promise<ChatMessage[]> {
 /**
  * PUBLIC_INTERFACE
  * Sends an audio blob for STT→LLM→TTS pipeline.
- *
- * Note: backend currently doesn't expose this yet; kept as forward-compatible contract.
  */
 export async function sendAudioForAssistant(params: {
   audio: Blob;
